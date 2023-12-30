@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        async function loadPost(name) {
+            const r     = await fetch("posts.json");
+            const posts = await r.json();
+
+            for (const i in posts) {
+                const post = posts[i];
+
+                if (post["id"] == name)
+                    return post;
+            }
+
+            return null;
+        }
+
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const postName = window.location.href.split("?")[1];
+            loadPost(postName).then((post) => {
+                // TODO: 404
+
+                var code = '<section class="SubHeading">'
+                         + '<h3><u>' + post["name"] + '</u></h3>'
+                         + '<span>' +
+                         + '</section>';
+
+                code    += '<object type=\"text/html\" data='
+                        +  post[""]
+                        +  '></object>';
+
+                document.body.innerHTML += code;
+                document.title = "chromalabs - " + post["name"];
+            });
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: 'MartianMono';
+            src: url('assets/static/MartianMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: MartianMono;
+            font-size: large;
+            margin: 5%;
+            padding-left: 10%;
+            padding-right: 10%;
+            background: #f4f4f4;
+        }
+
+        .SubHeading {
+            padding-top: 2%;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        footer {
+            padding-top: 30%;
+        }
+    </style>
+    <title>chromalabs</title>
+</head>
+
+<body>
+    <section class="Header">
+        <h1>chromalabs.co.uk</h1>
+    </section>
+</body>
+
+</html>

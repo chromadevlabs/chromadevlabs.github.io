@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        var posts = document.getElementById("Posts");
+        //var newPost = document.createElement('p');
+        //newPost.textContent = 'This is a dynamically generated post';
+        //posts.appendChild(newPost);
+    </script>
+    <title>chromalabs</title>
+    <style>
+        @font-face {
+            font-family: 'MartianMono';
+            src: url('assets/static/MartianMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: MartianMono;
+            font-size: large;
+            margin: 5%;
+            padding-left: 10%;
+            padding-right: 10%;
+            background: #f4f4f4;
+        }
+
+        .SubHeading {
+            padding-top: 2%;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        footer {
+            padding-top: 30%;
+        }
+    </style>
+</head>
+<body>
+    <section class="Header">
+        <h1>chromalabs.co.uk</h1>
+    </section>
+
+    <section class="SubHeading">
+        <h3><u>About</u></h3>
+        <span>
+            Yo yo, I'm Oliver James. I'm a C++ developer at
+            <a href="https://www.juce.com">JUCE</a>
+            where I'm doing things like adding unicode support and
+            (hopefully) improving our GPU accelerating rendering.
+            <br><br>
+            I enjoy walks in the rain and programming for old(er) games consoles.
+            Im passionate about bringing programming to everyone, usually in the form of visual programming languages.
+            <br><br>
+        </span>
+    </section>
+
+    <section class="SubHeading">
+        <h3><u>Projects</u></h3>
+        <span>
+            <ul>
+                <li>Last Ascension - Original Sega Dreamcast game.</li>
+                <li>Forge - Visual programming language for generating C++ code.</li>
+                <li>GDSim - GDRom simulator.</li>
+            </ul>
+        </span>
+    </section>
+
+    <section class="SubHeading" id="Posts">
+        <h3><u>Posts</u></h3>
+    </section>
+
+    <footer>
+        <a href="https://twitter.com/chroma_don">Twitter</a>
+        <a href="https://github.com/chromadevlabs">Github</a>
+        <a href="https://github.com/evilmartians/mono">The Font</a>
+    </footer>
+</body>
+
+</html>
