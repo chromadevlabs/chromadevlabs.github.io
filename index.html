@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>brokencode</title>
         <style>
             html {
                 padding-top: 25px;
@@ -19,7 +20,7 @@
             }
 
             .post {
-                padding: 50px;
+                padding: 25px;
                 font-size: large;
                 text-align: left;
             }
@@ -30,18 +31,11 @@
                 text-decoration: underline;
             }
 
-            .post p {
-                margin: 0;
-            }
-
-            .container {
+            .content {
+                padding-left: 10%;
                 display: flex;
                 flex-direction: column;
                 min-height: 100%;
-            }
-
-            .content {
-                flex: 1;
             }
         </style>
 
@@ -69,12 +63,11 @@
             }
 
         </script>
-
     </head>
 
     <body>
         <header>
-            Brokencode: A programming brain dump
+            Brokencode: A (mad) programmers brain dump
         </header>
         <br>
 
@@ -82,13 +75,9 @@
             <a href="https://twitter.com/chroma_don">me</a>
         </div>
 
-        <div class="container">
-            <div id="content" class="content">
-            </div>
-
-            <footer>
-                - Oliver James -
-            </footer>
+        <div id="content" class="content">
         </div>
+
+        <footer>- Oliver James -</footer>
     </body>
 </html>
